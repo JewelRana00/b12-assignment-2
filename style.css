@@ -162,6 +162,7 @@ main{
     top: -130px;
     right: -90px;
     animation: rotateInfinite 30s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 }
 @keyframes rotateInfinite {
     from {
@@ -178,6 +179,10 @@ main{
 .badge-description-area ul li {
     margin-bottom: 20px;
 }
+.badge-description-area ul li::marker {
+  color: rgb(150, 145, 145);
+  font-size: 20px;
+}
 .badge-description-area ul li p {
     text-align: justify;
 }
@@ -189,14 +194,12 @@ main{
     width: 100%;
     height: auto;
     display: block;
-    /* min-width: 455px; */
 }
 /* Latest Deal Section */
 .deal-description-area {
     text-align: center;
     margin: 0 126px 100px;
 }
-
 .latest-deal-title {
     font-size: 50px;
     margin-bottom: 16px;
@@ -281,7 +284,7 @@ main{
     height: 533px;
     background-image: url(image/news-letter-bg.png);
     background-size: cover;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
 }
 .subscription-title {
     color: var(--white);
@@ -291,10 +294,10 @@ main{
 .subscription-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 .subscription-content input {
+    flex: 1 1 60%;
     height: 50px;
     width: 644px;
     padding: 8px 20px;
@@ -303,7 +306,7 @@ main{
     font-size: 16px;
 }
 .subscription-content button {
-    /* padding: 16px 50px; */
+    flex: 1 1 35%;
     font-family: var(--secondaryFont);
     font-size: 16px;
     font-weight: 500;
@@ -330,6 +333,11 @@ main{
     color: var(--textTertiaryColor);
     margin-bottom: 32px;
 }
+.nav-footer ul li a,
+.info-nav-footer ul li a {
+    text-decoration: none;
+    color: var(--textTertiaryColor);
+}
 .brand-details img {
     margin-bottom: 16px;
 }
@@ -343,12 +351,17 @@ main{
     margin-right: 24px;
     cursor: pointer;
 }
+
+/* Small Screen Design */
 @media screen and (max-width: 576px) {
-    .brand img {
-        width: 100px;
-        height: auto;
-    }
-    .nav-bar ul {
+p {
+    font-size: 14px;
+}
+.brand img {
+    width: 100px;
+    height: auto;
+}
+.nav-bar ul {
     display: none;
 }
 .header {
@@ -372,20 +385,34 @@ main{
 .hero-title {
     font-size: 24px;
 }
-p {
-    font-size: 14px;
+main {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.card-section {
+    margin-bottom: 50px;
 }
 .card-section-title {
     font-size: 24px;
 }
 .card-description-area {
     text-align: center;
-    margin: 0 28px 28px;
+    margin: 0 0 28px;
 }
 .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 28px;
-    margin: 0 15px 100px;
+    margin: 0 0 50px;
+}
+.card-title {
+    font-size: 16px;
+}
+.card-price{
+    font-size: 16px;
+}
+.card button {
+    padding: 12px 10px;
+    font-size: 14px;
 }
 .card button {
     padding: 12px 30px;
@@ -394,7 +421,9 @@ p {
     flex-direction: column;
     gap: 18px; 
     margin-bottom: 60px;
-    padding: 0 16px;
+}
+.badges, .badge-description-area {
+    width: 100%;
 }
 .badge {
     display: none;
@@ -403,17 +432,15 @@ p {
     font-size: 24px;
     margin-bottom: 16px;
 }
-.badges, .badge-description-area {
-    width: 100%;
+.badge-description-area ul {
+    list-style-position: outside;
+    padding-left: 20px;
 }
 .badge-description-area {
     margin: 0 auto;
 }
 .deal-description-area {
-    margin: 0 16px;
-}
-.latest-deal {
-    margin: 16px;
+    margin: 0 16px 30px;
 }
 .offer-section {
     grid-template-areas: 
@@ -422,13 +449,28 @@ p {
     "bigPortionOffer"
     ;
     grid-template-columns: 1fr;
-    gap: 20px; /* optional */
+    gap: 20px;
 }
 .big-portion-offer {
     height: 200px;
 }
 .latest-deal-title {
     font-size: 24px;
+}
+.subscription-section {
+    max-width: 100%;
+    max-height: 276px;
+}
+.subscription-title {
+    font-size: 24px;
+}
+.subscription-content {
+    padding: 0 16px;
+}
+.subscription-content input,
+.subscription-content button {
+    width: 100%;
+    margin: 5px 0;
 }
 .footer {
     flex-direction: column;
