@@ -230,17 +230,8 @@ main{
     grid-area: bigOffer;
     background-image: url(image/deal-bloom.png);
 }
-.big-offer::before,
-.semi-big-offer::before,
-.big-portion-offer::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 14px;
-    z-index: 1;
-}
 .offer-title {
+    text-align: center;
     font-size: 20px;
     margin-bottom: 15px;
 }
@@ -266,6 +257,16 @@ main{
     grid-area: bigPortionOffer;
     height: 100%;
     background-image: url(image/deal-zabo.png);
+}
+.big-offer::before,
+.semi-big-offer::before,
+.big-portion-offer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    z-index: 1;
 }
 .offer-title,
 .offer-button,
@@ -456,6 +457,9 @@ main {
 }
 .latest-deal-title {
     font-size: 24px;
+}
+.big-portion-title {
+    font-size: 20px;
 }
 .subscription-section {
     max-width: 100%;
