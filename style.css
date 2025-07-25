@@ -175,14 +175,14 @@ main{
     font-size: 50px;
     margin: 30px 0 20px;
 }
-.badge-section .description-area ul li {
+.badge-description-area ul li {
     margin-bottom: 20px;
 }
-.badge-section .description-area ul li p {
+.badge-description-area ul li p {
     text-align: justify;
 }
 
-.badges, .badge-section .description-area {
+.badges, .badge-description-area {
     width: 50%;
 }
 .image-badge {
@@ -190,82 +190,6 @@ main{
     height: auto;
     display: block;
     /* min-width: 455px; */
-}
-@media screen and (max-width: 576px) {
-    .brand img {
-        width: 100px;
-        height: auto;
-    }
-    .nav-bar ul {
-    display: none;
-}
-.header {
-    margin: 0 auto;
-}
-.nav{
-    margin: 30px 16px 80px;
-}
-.hero-area {
-    flex-direction: column-reverse;
-    gap: 28px;
-    margin-bottom: 65px;
-}
-.text-area,
-.hero-area img {
-    width: 100%;
-}
-.hero-area .text-area {
-    padding: 0 16px;
-}
-.hero-title {
-    font-size: 24px;
-}
-p {
-    font-size: 14px;
-}
-.card-section-title {
-    font-size: 24px;
-}
-.card-description-area {
-    text-align: center;
-    margin: 0 28px 28px;
-}
-.cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 28px;
-    margin: 0 15px 100px;
-}
-.card button {
-    padding: 12px 30px;
-}
-.badge-section {
-    flex-direction: column;
-    gap: 18px; 
-    margin-bottom: 130px; 
-}
-.badge {
-    display: none;
-}
-.badge-title {
-    font-size: 24px;
-    margin: 0;
-}
-.badge-section .description-area ul li {
-    margin-bottom: 20px;
-}
-.badge-section .description-area ul li p {
-    text-align: justify;
-}
-
-.badges, .badge-section .description-area {
-    width: 50%;
-}
-.image-badge {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* min-width: 455px; */
-}
 }
 /* Latest Deal Section */
 .deal-description-area {
@@ -284,7 +208,7 @@ p {
     "semiBigOffer bigPortionOffer bigPortionOffer"
     ;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; /* optional */
+    gap: 20px;
 }
 .big-offer,
 .semi-big-offer,
@@ -410,12 +334,107 @@ p {
     margin-bottom: 16px;
 }
 .social-link {
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
 }
 .social-link img {
-margin-right: 24px;
-cursor: pointer;
+    margin-right: 24px;
+    cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+    .brand img {
+        width: 100px;
+        height: auto;
+    }
+    .nav-bar ul {
+    display: none;
+}
+.header {
+    margin: 0 auto;
+}
+.nav{
+    margin: 30px 16px 80px;
+}
+.hero-area {
+    flex-direction: column-reverse;
+    gap: 28px;
+    margin-bottom: 65px;
+}
+.text-area,
+.hero-area img {
+    width: 100%;
+}
+.hero-area .text-area {
+    padding: 0 16px;
+}
+.hero-title {
+    font-size: 24px;
+}
+p {
+    font-size: 14px;
+}
+.card-section-title {
+    font-size: 24px;
+}
+.card-description-area {
+    text-align: center;
+    margin: 0 28px 28px;
+}
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 28px;
+    margin: 0 15px 100px;
+}
+.card button {
+    padding: 12px 30px;
+}
+.badge-section {
+    flex-direction: column;
+    gap: 18px; 
+    margin-bottom: 60px;
+    padding: 0 16px;
+}
+.badge {
+    display: none;
+}
+.badge-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.badges, .badge-description-area {
+    width: 100%;
+}
+.badge-description-area {
+    margin: 0 auto;
+}
+.deal-description-area {
+    margin: 0 16px;
+}
+.latest-deal {
+    margin: 16px;
+}
+.offer-section {
+    grid-template-areas: 
+    "bigOffer"
+    "semiBigOffer"
+    "bigPortionOffer"
+    ;
+    grid-template-columns: 1fr;
+    gap: 20px; /* optional */
+}
+.big-portion-offer {
+    height: 200px;
+}
+.latest-deal-title {
+    font-size: 24px;
+}
+.footer {
+    flex-direction: column;
+    margin-left: 20px;
+}
+.social-link {
+    justify-content: left;
+}
 }
