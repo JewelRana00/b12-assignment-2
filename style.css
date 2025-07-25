@@ -48,9 +48,6 @@ p {
     align-items: center;
     justify-content: space-between;
 }
-.nav-bar {
-
-}
 .nav-bar ul {
     list-style: none;
 }
@@ -74,11 +71,17 @@ p {
     text-decoration: none;
 
 }
+/* For Small Device */
 /* Hero Area */
 .hero-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+.text-area,
+.hero-area img {
+    width: 50%;
 }
 .hero-title {
     font-size: 65px;
@@ -93,7 +96,7 @@ main{
     margin: 0 auto 120px;
 }
 /* Card Section */
-.card-section .description-area {
+.card-description-area {
     text-align: center;
     margin: 0 126px 50px;
 }
@@ -102,15 +105,18 @@ main{
     margin-bottom: 16px;
 }
 .cards {
-    margin-bottom: 210px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px 20px;
+    margin-bottom: 210px;
 }
 .card {
     text-align: center;
     max-width: 270px;
     font-family: var(--secondaryFont);
+}
+.card img{
+    width: 100%;
 }
 .card-title {
     font-family: var(--secondaryFont);
@@ -184,6 +190,82 @@ main{
     height: auto;
     display: block;
     /* min-width: 455px; */
+}
+@media screen and (max-width: 576px) {
+    .brand img {
+        width: 100px;
+        height: auto;
+    }
+    .nav-bar ul {
+    display: none;
+}
+.header {
+    margin: 0 auto;
+}
+.nav{
+    margin: 30px 16px 80px;
+}
+.hero-area {
+    flex-direction: column-reverse;
+    gap: 28px;
+    margin-bottom: 65px;
+}
+.text-area,
+.hero-area img {
+    width: 100%;
+}
+.hero-area .text-area {
+    padding: 0 16px;
+}
+.hero-title {
+    font-size: 24px;
+}
+p {
+    font-size: 14px;
+}
+.card-section-title {
+    font-size: 24px;
+}
+.card-description-area {
+    text-align: center;
+    margin: 0 28px 28px;
+}
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 28px;
+    margin: 0 15px 100px;
+}
+.card button {
+    padding: 12px 30px;
+}
+.badge-section {
+    flex-direction: column;
+    gap: 18px; 
+    margin-bottom: 130px; 
+}
+.badge {
+    display: none;
+}
+.badge-title {
+    font-size: 24px;
+    margin: 0;
+}
+.badge-section .description-area ul li {
+    margin-bottom: 20px;
+}
+.badge-section .description-area ul li p {
+    text-align: justify;
+}
+
+.badges, .badge-section .description-area {
+    width: 50%;
+}
+.image-badge {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* min-width: 455px; */
+}
 }
 /* Latest Deal Section */
 .deal-description-area {
